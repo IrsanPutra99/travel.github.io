@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="header.wrapper">
+        <navbar class="container">
+            <div class="navbar">
+            <img class="logo" src="image/log.jpg" alt="">
+            <div class="menu">
+                <a class="menu-item" href="#hero">Home</a>
+                <a class="menu-item" href="#package">Our Package</a>
+                <a class="menu-item" href="#call-us">Call Us</a>
+            </div>
+            </div>
+        </navbar>
+    </header>
+
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-tittle">
+                    <h1>Your Trusted Travel Agent's</h1>
+                    <h6>Our happiness is our happiness</h6>
+                </div>
+            </div>
+        </section>
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <div class="about">
+                        <img class="about-img" src="image/bali.jpeg" alt="">
+                        <img class="about-img" src="image/bromo.jpeg" alt="">
+                        <img class="about-img" src="image/dieng.jpeg" alt="">
+                        <img class="about-img" src="image/karimun.jpeg" alt="">
+                        <img class="about-img" src="image/lombok.jpeg" alt="">
+                        <img class="about-img" src="image/raja.jpeg" alt="">
+                        <button onclick="plusDivs(-1)">Previous</button>
+                        <button onclick="plusDivs(1)">Next</button>
+
+                        <script>
+                            var slideIndex = 1;
+                            showDivs(slideIndex);
+
+                            function plusDivs(n) {
+                                showDivs((slideIndex += n));
+                            }
+
+                            function showDivs(n) {
+                                var i;
+                                var x=document.getElementsByClassName("about-img");
+                                if (n > x.length) {
+                                    slideIndex = 1.
+                                }
+
+                                if (n < 1) {
+                                    slideIndex = x.length
+                                }
+
+                                for (i=0; i<x.length;i++) {
+                                    x[i].style.display ="none"
+                                }
+                                x[slideIndex - 1].style.display = "block"
+                            }
+                        </script>
+
+                        <div class="about-content">
+                            <div class="content-caption">
+                                <p>liburan jadi menyenangkan bersama Travel Agentku"</p>
+                            </div>
+                            <div class="content-person">
+                                <img src="http://placekitten.com/500/500" alt="">
+                               <div class="person-info">
+                                <h6>Florent Hughes</h6>
+                                <p>ibu rumah tangga, 28</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="about-information">
+                            <h6 class="information-tittle">use this to provide user users more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product</h6>
+                            <ul class="information-list">
+                                <li class="list-number">
+                                    <div class="list-number-no">1</div>
+                                    <p class="list-paragraf">your first feature, written in the form of a benefit statement</p>
+                                </li>
+                                <li class="list-number">
+                                    <div class="list-number-no">2</div>
+                                    <p class="list-paragraf">your first feature, written in the form of a benefit statement</p>
+                                </li>
+                                <li class="list-number">
+                                    <div class="list-number-no">3</div>
+                                    <p class="list-paragraf">your first feature, written in the form of a benefit statement</p>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    
+                    <div class="contact" id="call-us">
+                        <div class="card">
+                            <div class="card-tittle">
+                                <h4>Contack Us</h4>
+                                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p>
+                            </div>
+                            <form name="FormPendaftaran" action="" onsubmit="return validateForm()" method="post" >
+                                <label for="">Your Name</label> <br> <br>
+                                <input type="text" name="name" class="input"> <br> <br>
+                                <label for="">Email</label> <br><br>
+                                <input type="text" name="email" class="input"> <br><br>
+                                <label for="">What are You Interest in</label> <br><br>
+                                <select name="tujuan" id="" class="input">
+                                    <option value="1">Bali</option>
+                                    <option value="2">Lombok</option>
+                                    <option value="3">Raja Ampat</option>
+                                    <option value="4">Karimun Jawa</option>
+                                    <option value="5">Bromo</option>
+                                    <option value="6">Dieng</option>
+                                </select> 
+                                <br><br>
+                                <input type="submit" value="Send">
+                                <br><br>
+
+                                <script>
+                                    function validateForm() {
+                                        var name = document.forms["FormPendaftaran"]["name"].value;
+                                        var email = document.forms["FormPendaftaran"]["email"].value;
+                                        var tujuan = document.forms["FormPendaftaran"]["tujuan"].value;
+
+                                        if (name == "" || email == "" || tujuan == "") {
+                                            alert("tidak boleh kosong");
+                                            return false;
+                                        }
+                                        
+                                    }
+                                </script>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="package">
+            <div class="container">
+                <div class="paket">
+                    <h1>Our Package</h1>
+                </div>
+                <table>
+                    <tr class="kolom1">
+                      <th style="font-weight: 700;">Bali</th>
+                      <th style="font-weight: 700;">Lombok</th>
+                      <th style="font-weight: 700;">Raja Ampat</th>
+                    </tr>
+                    <tr>
+                      <td>Travel dan wisata ke bali, kunjungi cagar budaya dan kuliner menarik</td>
+                      <td>Nikmati suasana pandai nan eksotis</td>
+                      <td>Kunjungi dan nikmati deretan gugusan kepulauan yang bagus untuk dijelajahi</td>
+                    </tr>
+                    <tr class="kolom3">
+                      <td style="text-align:center">Karimun Jawa</td>
+                      <td style="text-align:center">Bromo</td>
+                      <td style="text-align:center">Dieng</td>
+                    </tr>
+                    <tr>
+                        <td>Nikmati Kepulauan karimun serta aktivitas snorkling sambil memberi makan ikan</td>
+                        <td>Menikmati alam serta menguji ketangguhan stamina para traveler sekalian</td>
+                        <td>Nikmati candi-candi kecil di dieng dan bermalam disana dengan paket homestay kami</td>
+                      </tr>
+                  </table>
+            </div>
+
+            <div class="closing">
+                <div class="paket">
+                    <h1>Your Clossing Argument Headline</h1>
+                    <h6>Kami bekerja sama dengan perusahaan akomodasi tour perjalanan untuk memberikan pelayanan terbaik kami kepada Anda.</h6>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <h2>Travel and Agent Services</h2>
+        <h3>Term and Service    Privacy Police</h3>
+        <h3>2023</h3>
+    </footer>
+
+</body>
+</html>
